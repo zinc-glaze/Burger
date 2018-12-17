@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1>Consumer</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4">
+      <h3>Ready to Consume</h3>
+      <ul>
+        {{#each unconsumed}}
+          <li>
+            {{burger}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <form class="col s4">
+      <div class="input-field col s6">
+        <input id="user-burger" type="text" class="validate">
+        <label for="user-burger">Enter a burger here</label>
+      </div>
+      <button type="submit">Submit</button>
+      <h6>Enter something that you would like to consume</h6>
+    </form>
+    <div class="col s4">
+      <h3>Consumed</h3>
+       <ul>
+        {{#each consumed}}
+          <li>
+            {{burger}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

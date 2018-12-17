@@ -3,7 +3,7 @@ var express = require("express");
 var app = express(); 
 var PORT = process.env.PORT || 3000;
 
-//Serve static content from "public" dir
+//Serve static content from "public" directory
 app.use(express.static("public"));
 
 //Parse incoming urlencoded requests
