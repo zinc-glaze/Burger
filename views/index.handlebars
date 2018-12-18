@@ -10,10 +10,12 @@
       <br>
       <ul>
         {{#each burgers}}
-          <li>
-            <h6>{{burger_name}}  <button class="btn waves-effect waves-light">Devour</button></h6>
-            <br>
-          </li>
+          {{#unless devoured}}
+            <li>
+              <h6>{{burger_name}}  <button class="btn waves-effect waves-light">Devour</button></h6>
+              <br>
+            </li>
+          {{/unless}}
         {{/each}}
       </ul>
     </div>
@@ -24,7 +26,7 @@
           <label for="user-burger">Enter a burger here</label>
         </div>
       </div>
-      <div class="row"><button class="btn waves-effect waves-light" type="submit">Submit</button></div>
+      <div class="row"><button id="new-burger" class="btn waves-effect waves-light" type="submit" name="action">Submit</button></div>
       <div class="row"><p>Enter a burger that you would like to consume</p></div>
     </form>
     <div class="col s4 center-align">
@@ -32,10 +34,12 @@
       <br>
       <ul>
         {{#each burgers}}
-          <li>
-            <p>{{burger_name}}</p>
-            <br>
-          </li>
+          {{#if devoured}}
+            <li>
+              <p>{{burger_name}}</p>
+              <br>
+            </li>
+          {{/if}}
         {{/each}}
       </ul>
     </div>

@@ -26,7 +26,7 @@ router.get("/", function(req, res) {
 //Add new row of data to SQL table
 router.post("/api/burgers", function(req, res) {
   //Call method to insert row (of data submitted from html form by client)
-  burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+  burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, false], function(result) {
     //send back ID of the new data object
     res.json({ id: result.insertId });
   });
