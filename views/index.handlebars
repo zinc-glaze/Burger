@@ -1,34 +1,40 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <h1>Consumer</h1>
+      <h2 class="center-align">Burger Devourer</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col s4">
-      <h3>Ready to Consume</h3>
+    <div class="col s4 center-align">
+      <h5>Ready to Consume</h5>
+      <br>
       <ul>
-        {{#each unconsumed}}
+        {{#each burgers}}
           <li>
-            {{burger}}
+            <h6>{{burger_name}}  <button class="btn waves-effect waves-light">Devour</button></h6>
+            <br>
           </li>
         {{/each}}
       </ul>
     </div>
-    <form class="col s4">
-      <div class="input-field col s6">
-        <input id="user-burger" type="text" class="validate">
-        <label for="user-burger">Enter a burger here</label>
+    <form class="col s4 center-align">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="user-burger" type="text" class="validate">
+          <label for="user-burger">Enter a burger here</label>
+        </div>
       </div>
-      <button type="submit">Submit</button>
-      <h6>Enter something that you would like to consume</h6>
+      <div class="row"><button class="btn waves-effect waves-light" type="submit">Submit</button></div>
+      <div class="row"><p>Enter a burger that you would like to consume</p></div>
     </form>
-    <div class="col s4">
-      <h3>Consumed</h3>
-       <ul>
-        {{#each consumed}}
+    <div class="col s4 center-align">
+      <h5>Consumed</h5>
+      <br>
+      <ul>
+        {{#each burgers}}
           <li>
-            {{burger}}
+            <p>{{burger_name}}</p>
+            <br>
           </li>
         {{/each}}
       </ul>
